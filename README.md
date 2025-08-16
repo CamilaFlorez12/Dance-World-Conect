@@ -191,3 +191,10 @@ Facilita la búsqueda de eventos por palabra clave.
 db.eventos.find({"participantes.nombre":{$regex:"camila",$options:"i"},estilo_principal:{$regex:"ballet",$options:"i"}})
 ```
 Filtra competidores para revisar desempeño o mostrar resultados personalizados
+
+## 🤝 Participantes
+- **Camila Florez** 
+---
+
+## 📜 Contacto GitHub
+- https://github.com/CamilaFlorez12
