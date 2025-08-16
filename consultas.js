@@ -7,7 +7,7 @@ db.bailarines.find({estilos:{$regex:"ballet"}})
 db.bailarines.find({país:{$regex:"^c",$options:"i"}})
 
 //3)Se filtran a los bailarines por fecha de nacimiento, por ejemplo si en alguna competencia hay resricción de edad esta consulta puede ser útil
-db.bailarines.find({país:{$regex:"^c",$options:"i"}})
+db.bailarines.find({fecha_nacimiento:{$regex:"^2007"}})
 
 //4)Filtra cada dominio que cada bailarin usa
 db.bailarines.find({email:{$regex:"@gmail\\.com$"}})
@@ -24,7 +24,7 @@ db.instructores.find({certificaciones:{$regex:"licenciatura"},certificaciones:{$
 db.instructores.find({certificaciones:{$regex:"avanzado"}})
 
 //8)Trae los instructores con mas de 10 años de experiencia, lo cual es fundamental al momneto de buscar un instructor para una academia de danza
-db.instructores.find({anios_experiecia:{$size:3}})
+db.instructores.find({anios_experiecia:{$gt:10}})
 
 //9)Detectar un perfil con estandar de certificaciones alto para ver los perfiles de los "mejores" instructores
 db.instructores.find({certificaciones:{$size:4}})
